@@ -1,0 +1,96 @@
+@import "_normalize";
+
+@font-face {
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: 400;
+	src: local(""), url("../fonts/lato-v22-latin-regular.woff2") format("woff2"),
+		url("../fonts/lato-v22-latin-regular.woff") format("woff");
+}
+@font-face {
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: 700;
+	src: local(""), url("../fonts/lato-v22-latin-700.woff2") format("woff2"),
+		url("../fonts/lato-v22-latin-700.woff") format("woff");
+}
+@font-face {
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: 900;
+	src: local(""), url("../fonts/lato-v22-latin-900.woff2") format("woff2"),
+		url("../fonts/lato-v22-latin-900.woff") format("woff");
+}
+
+body {
+	font-family: "Lato";
+	font-style: normal;
+	font-weight: 400;
+	color: #102746;
+}
+[class*="container"] {
+	max-width: 1090px;
+	margin: 0 auto;
+}
+.ibg {
+	position: relative;
+}
+.ibg > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.underline-hover {
+	position: relative;
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 0.1em;
+		background-color: #fff;
+		opacity: 0;
+		transition: opacity 0.3s, transform 0.3s;
+	}
+	&:hover:after,
+	&:focus:after {
+		opacity: 1;
+		transform: translate3d(0, 0.15em, 0);
+	}
+	&:active {
+		opacity: 0.5;
+	}
+}
+.arrow-link {
+	color: #006dfe;
+	text-transform: uppercase;
+	display: inline-block;
+	padding-right: 70px;
+	background: url(../img/SVG/shape.svg) no-repeat 93% center;
+	transition: 0.3s;
+	&:hover {
+		background-position: right center;
+	}
+	&:active,
+	&:focus {
+		opacity: 0.6;
+	}
+}
+.ancor {
+	position: relative;
+	top: -95px;
+}
+.hidden {
+	transform: translateY(-100%);
+}
+@import "_header";
+@import "_benefits";
+@import "_trip";
+@import "_places";
+@import "_video";
+@import "_footer";

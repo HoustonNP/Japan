@@ -1,0 +1,31 @@
+.footer {
+	padding: 118px 15px;
+	background: #0e1d28;
+	color: #fff;
+	line-height: 24px;
+
+	&__logo {
+		flex: 1 1 50%;
+	}
+	&__logo > img {
+		width: 170px;
+		height: 64px;
+	}
+	&__info {
+		flex: 1 1 50%;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__list-title {
+		font-size: 18px;
+	}
+	&__list-item {
+		padding-bottom: 5px;
+	}
+	&__list-item > a {
+		color: inherit;
+	}
+}
+.footer-container {
+	display: flex;
+}

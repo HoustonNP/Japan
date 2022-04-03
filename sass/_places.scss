@@ -1,0 +1,59 @@
+.places {
+	margin-bottom: 144px;
+	&__title {
+		margin-bottom: 64px;
+	}
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+		column-gap: 52px;
+		row-gap: 58px;
+	}
+	&__card-picture {
+		min-height: 377px;
+		margin-bottom: 45px;
+	}
+	&__card-text {
+		margin-bottom: 30px;
+		line-height: 24px;
+	}
+	&__card-button {
+		text-transform: uppercase;
+		color: #fff;
+		padding: 12px 19px;
+		background: #006dfe;
+		transition: 0.3s;
+		&:hover,
+		&:focus {
+			background-color: #3d91ff;
+		}
+		&:active {
+			transform: scale(0.93);
+		}
+	}
+}
+.picture {
+	&__info {
+		position: absolute;
+		bottom: 0;
+		display: flex;
+		padding: 15px 25px;
+		background: rgba(21, 24, 36, 0.6);
+		width: 100%;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #fff;
+	}
+	&__info-name {
+		margin-right: auto;
+	}
+	&__info-likes {
+		padding-right: 25px;
+		margin-right: 15px;
+		background: url(../img/SVG/heart.svg) no-repeat right 3px;
+	}
+	&__info-commends {
+		padding-right: 25px;
+		background: url(../img/SVG/comments.svg) no-repeat right 4px;
+	}
+}

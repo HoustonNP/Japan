@@ -1,0 +1,100 @@
+.header > img {
+	z-index: -1;
+}
+.header {
+	min-height: 100%;
+	overflow: hidden;
+	color: #fff;
+	background: linear-gradient(180deg, rgba(53, 66, 103, 0.0001) 0%, #151824 95.04%);
+
+	&__nav {
+		padding: 56px 15px 10px;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 100;
+		transition: 0.2s;
+	}
+	&__nav-active {
+		background-color: #0e1d28;
+		transition: 0.2s;
+	}
+	&__nav-container {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__nav-logo {
+		margin-right: 120px;
+	}
+	&__info {
+		margin-top: 263px;
+		padding: 0 15px;
+	}
+	&__info-title {
+		font-weight: 700;
+		font-size: 50px;
+		line-height: 60px;
+		max-width: 619px;
+		margin-bottom: 22px;
+	}
+	&__info-subtitle {
+		max-width: 546px;
+		line-height: 24px;
+		margin-bottom: 59px;
+	}
+}
+.nav-menu {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__item:not(:last-child) {
+		margin-right: 82px;
+	}
+	&__item-link {
+		font-size: 18px;
+		color: inherit;
+	}
+}
+.form {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+
+	&__input {
+		width: 297px;
+		margin: 0 60px 0 0;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 24px;
+		background: transparent;
+		color: inherit;
+		border-bottom: 3px solid #fff;
+		padding: 0 0 22px 43px;
+		background: url(../img/SVG/circle.svg) no-repeat left 3px;
+	}
+	&__input::placeholder {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 24px;
+		color: inherit;
+	}
+	&__button {
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 29px;
+		color: #fff;
+		text-transform: uppercase;
+		padding: 15px 39px;
+		background-color: #1b7dff;
+		transition: 0.15s;
+		&:hover {
+			background-color: #3d91ff;
+		}
+		&:focus {
+			background-color: #3d91ff;
+		}
+		&:active {
+			transform: scale(0.93);
+		}
+	}
+}
