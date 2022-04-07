@@ -1,10 +1,11 @@
 const nav = document.querySelector('.header__nav');
+const navHeight = nav.offsetHeight;
 const scrollPosition = () => window.pageYOffset;
 const containHidden = () => nav.classList.contains('hidden');
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
-	if (window.pageYOffset > 100) {
+	if (window.pageYOffset > navHeight) {
 		nav.classList.add('header__nav-active')
 	} else {
 		nav.classList.remove('header__nav-active')
@@ -12,7 +13,9 @@ window.addEventListener('scroll', () => {
 
 	if (scrollPosition() > lastScroll && !containHidden()) {
 		nav.classList.add('hidden')
-	} else if (scrollPosition() < lastScroll && containHidden()) {
+	}
+	
+	if (scrollPosition() < lastScroll && containHidden()) {
 		nav.classList.remove('hidden')
 	}
 
